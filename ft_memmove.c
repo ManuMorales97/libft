@@ -6,11 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 15:35:19 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:24 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:26:18 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	d[20];
 	char	*s;
@@ -52,4 +52,4 @@ int	main(void)
 	ft_memmove(d, s, n);
 	printf("%s\n", d);
 	return (0);
-}
+}*/

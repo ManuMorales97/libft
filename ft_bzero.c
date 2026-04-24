@@ -6,11 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:43:18 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:09:32 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:16:51 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

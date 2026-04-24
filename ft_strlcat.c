@@ -6,11 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 10:36:44 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:34 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:26:41 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

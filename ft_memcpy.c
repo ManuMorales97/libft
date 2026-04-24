@@ -6,12 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 09:47:43 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:21 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:26:11 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,23 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 16:01:22 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:45 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:27:04 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-/*#include <stdio.h>
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-
-int main()
-{
-	char	c[] = "Hola caraculo";
-	char	d[] = "Holaaa cara";
-	size_t	n = 6;
-
-	printf("%d\n", ft_strncmp(c, d, n));
-}*/
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -39,3 +27,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*int main()
+{
+	char	c[] = "Hola caraculo";
+	char	d[] = "Holaaa cara";
+	size_t	n = 6;
+
+	printf("%d\n", ft_strncmp(c, d, n));
+}*/

@@ -6,11 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 16:52:32 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:31 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:26:27 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

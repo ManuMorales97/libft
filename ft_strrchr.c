@@ -6,12 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 15:25:24 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:52 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:27:15 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

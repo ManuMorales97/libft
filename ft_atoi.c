@@ -6,11 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 15:32:22 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:09:29 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:16:38 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

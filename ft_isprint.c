@@ -6,22 +6,11 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:57:39 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/23 17:10:12 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:25:52 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-
-int	ft_isprint(char c);
-
-int	main()
-{
-	char b = ' ';
-
-	printf("%d\n", ft_isprint(b));
-
-	return(0); 
-}*/
+#include "libft.h"
 
 int	ft_isprint(char c)
 {
@@ -30,3 +19,11 @@ int	ft_isprint(char c)
 	else
 		return (0);
 }
+/*int	main()
+{
+	char b = ' ';
+
+	printf("%d\n", ft_isprint(b));
+
+	return(0); 
+}*/
