@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:16:43 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/24 14:26:51 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/27 15:17:44 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	dst = malloc(sizeof(char) * size);
-	if (!dst)
-		return (0);
 	i = 0;
 	while (src[i] && i < size -1)
 	{

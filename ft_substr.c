@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 12:40:35 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/27 13:19:51 by manmoral         ###   ########.fr       */
+/*   Created: 2026/04/27 11:16:13 by manmoral          #+#    #+#             */
+/*   Updated: 2026/04/27 15:18:56 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	size_t	i;
+	char	*stri;
+	size_t	slen;
 
-	i = 0;
-	str = malloc(ft_strlen((char *)s) + 1);
-	while (str[i] != '\0')
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return ((char *)s);
+	if (!s)
+		return (NULL);
+	slen = ft_strlen((char *)s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len + start > slen)
+		len = slen - start;
+	stri = malloc(len + 1);
+	if (!stri)
+		return (NULL);
+	ft_strlcpy(stri, &s[start], len +1);
+	return (stri);
 }
 
 /*int	main(void)
 {
-	const char	*s;
-	char		cpy;
+	char const		str[13] = "Hola caracola";
+	char			*stri;
 
-	cpy = ft_strdup(s);
-	printf("original: %s\n", s);
-	printf("copia: %s\n", cpy);
-	free(s);
+	stri = ft_substr(str, 0, 4);
+	printf("%s\n", stri);
+	free(stri);
 	return (0);
 }*/
