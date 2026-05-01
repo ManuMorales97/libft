@@ -6,13 +6,13 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:53:06 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/29 12:50:54 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:12:35 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
@@ -32,7 +32,7 @@ char *ft_strtim(char const *s1, char const *set)
 
 /*int main (int argc, char **argv)
 {
-	char *result = ft_strtim(argv[1], argv[2]);
+	char *result = ft_strtrim(argv[1], argv[2]);
 	if (argc != 2)
 	{
 			printf("%s\n", result);

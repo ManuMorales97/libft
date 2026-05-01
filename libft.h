@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:59:23 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/29 12:43:46 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:09:21 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_isalpha(char c);
 int		ft_isascii(char c);
 int		ft_isdigit(char c);
 int		ft_isprint(char c);
+char	*ft_itoa(int n);
 void	*ft_memchr(const void	*s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

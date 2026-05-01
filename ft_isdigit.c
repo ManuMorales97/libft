@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 15:44:21 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/24 14:17:24 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/04/30 15:47:52 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_isdigit(char c)
 	else
 		return (0);
 }
+
 /*int	main()
 {
 	char	b = 't';

@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 11:29:06 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/28 18:30:04 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:12:10 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static char	**wordcount(char const *s, char c);
 static char	**freemalloc(char **str, int n);
 static int	wordlen(const char *str, char c, int start);
-char	**ft_split(char const *s, char c);
+char		**ft_split(char const *s, char c);
 
-int	main(int argc, char **argv)
+/*int	main(int argc, char **argv)
 {
 	int	i = 0;
 	char	**result;
@@ -31,11 +31,11 @@ int	main(int argc, char **argv)
 		}
 	}
 	return (0);
-}
+}*/
 static char	**wordcount(char const *s, char c)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	**str;
 
 	i = 0;
@@ -48,7 +48,7 @@ static char	**wordcount(char const *s, char c)
 	}
 	str = malloc(sizeof(char *) * (j + 1));
 	if (!str)
-		return(NULL);
+		return (NULL);
 	return (str);
 }
 
@@ -56,7 +56,7 @@ static char	**freemalloc(char **str, int n)
 {
 	if (!str[n])
 	{
-		while(--n)
+		while (--n)
 		{
 			free(str[n]);
 		}
@@ -64,20 +64,22 @@ static char	**freemalloc(char **str, int n)
 	}
 	return (0);
 }
+
 static int	wordlen(const char *str, char c, int start)
 {
 	int	i;
-	
+
 	i = start;
-	while(str[i] && str[i] != c)
+	while (str[i] && str[i] != c)
 		i++;
 	return (i - start);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int			n;
-	int			i;
+	int		n;
+	int		i;
 	int		start;
 	int		len;
 
@@ -93,7 +95,6 @@ char	**ft_split(char const *s, char c)
 			start = i;
 			len = wordlen(s, c, i);
 			result[++n] = ft_substr(s, start, len);
-			printf("result: %s\n", result[n]);
 			if (!result[n])
 				freemalloc(result, n);
 		}
@@ -101,4 +102,3 @@ char	**ft_split(char const *s, char c)
 	result[++n] = 0;
 	return (result);
 }
-
