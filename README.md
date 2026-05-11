@@ -1,70 +1,70 @@
-*Este proyecto ha sido creado como parte del currículo de 42 por manmoral*
+*This project has been created as part of the 42 curriculum by manmoral*
 
 # Libft
 
-## Descripción
+## Description
 
-Libft es el primer proyecto del currículo de 42.
-El objetivo de este proyecto es recrear una selección de funciones de la biblioteca estándar de C, además de desarrollar funciones adicionales y herramientas para la gestión de listas enlazadas.
+Libft is the first project in the 42 curriculum.  
+The goal of this project is to recreate a selection of functions from the C standard library, as well as to develop additional utility functions and linked list management tools.
 
-Esta librería personalizada será reutilizada en futuros proyectos del cursus.
-Su finalidad es reforzar la comprensión de:
+This custom library will be reused in future projects throughout the cursus.  
+Its purpose is to strengthen understanding of:
 
-- Gestión de memoria.
-- Manipulación de cadenas.
-- Uso de punteros.
-- Asignación dinámica de memoria.
-- Estructuras de datos (listas enlazadas).
+- Memory management  
+- String manipulation  
+- Pointer usage  
+- Dynamic memory allocation  
+- Data structures (linked lists)  
 
-El resultado final es una librería estática llamada `libft.a`.
-
----
-
-## Estructura del Proyecto
-
-El proyecto está dividido en tres partes principales:
-
-### Parte 1 – Funciones de libc
-
-Reimplementación de funciones estándar de la biblioteca C como:
-
-- Comprobación de caracteres (isalpha, isdigit, isalnum, etc.).
-- Manipulación de cadenas (strlen, strchr, strncmp, etc.).
-- Funciones de memoria (memset, memcpy, memmove, etc.).
-- Conversión de tipos (atoi).
-- Reserva de memoria (calloc, strdup).
-
-Todas las funciones están prefijadas con `ft_`.
+The final result is a static library named `libft.a`.
 
 ---
 
-### Parte 2 – Funciones Adicionales
+## Project Structure
 
-Funciones utilitarias que no pertenecen a libc o que están implementadas de forma distinta:
+The project is divided into three main parts:
 
-- ft_substr
-- ft_strjoin
-- ft_strtrim
-- ft_split
-- ft_itoa
-- ft_strmapi
-- ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+### Part 1 – Libc Functions
 
-Estas funciones se centran principalmente en:
+Reimplementation of standard C library functions such as:
 
-- Manipulación avanzada de cadenas.
-- Escritura en descriptores de archivo.
-- Conceptos de programación funcional.
+- Character checks (isalpha, isdigit, isalnum, etc.)  
+- String manipulation (strlen, strchr, strncmp, etc.)  
+- Memory functions (memset, memcpy, memmove, etc.)  
+- Type conversion (atoi)  
+- Memory allocation (calloc, strdup)  
+
+All functions are prefixed with `ft_`.
 
 ---
 
-### Parte 3 – Listas Enlazadas
+### Part 2 – Additional Functions
 
-Implementación de una estructura básica de lista enlazada:
+Utility functions that are not part of libc or are implemented differently:
+
+- ft_substr  
+- ft_strjoin  
+- ft_strtrim  
+- ft_split  
+- ft_itoa  
+- ft_strmapi  
+- ft_striteri  
+- ft_putchar_fd  
+- ft_putstr_fd  
+- ft_putendl_fd  
+- ft_putnbr_fd  
+
+These functions mainly focus on:
+
+- Advanced string manipulation  
+- Writing to file descriptors  
+- Functional programming concepts  
+
+---
+
+### Part 3 – Linked Lists
+
+Implementation of a basic linked list structure:
 
 ```c
 typedef struct s_list
@@ -74,50 +74,50 @@ typedef struct s_list
 } t_list;
 ```
 
-Funciones implementadas para la gestión de listas:
+Implemented list management functions:
 
-- ft_lstnew
-- ft_lstadd_front
-- ft_lstsize
-- ft_lstlast
-- ft_lstadd_back
-- ft_lstdelone
-- ft_lstclear
-- ft_lstiter
-- ft_lstmap
+- ft_lstnew  
+- ft_lstadd_front  
+- ft_lstsize  
+- ft_lstlast  
+- ft_lstadd_back  
+- ft_lstdelone  
+- ft_lstclear  
+- ft_lstiter  
+- ft_lstmap  
 
-Estas funciones permiten crear, recorrer, modificar y liberar listas enlazadas.
+These functions allow creating, traversing, modifying, and freeing linked lists.
 
 ---
 
-## Compilación
+## Compilation
 
-Para compilar la librería:
+To compile the library:
 
 ```bash
 make
 ```
 
-Esto generará:
+This will generate:
 
 ```
 libft.a
 ```
 
-Reglas disponibles en el Makefile:
+Available Makefile rules:
 
-- `make` o `make all`
-- `make clean`
-- `make fclean`
-- `make re`
+- `make` or `make all`  
+- `make clean`  
+- `make fclean`  
+- `make re`  
 
-Flags de compilación utilizadas:
+Compilation flags used:
 
 ```
 -Wall -Wextra -Werror
 ```
 
-La librería se crea utilizando:
+The library is created using:
 
 ```
 ar rcs libft.a
@@ -125,21 +125,21 @@ ar rcs libft.a
 
 ---
 
-## Cómo utilizar la librería
+## How to Use the Library
 
-1. Incluye el header en tu archivo C:
+1. Include the header in your C file:
 
 ```c
 #include "libft.h"
 ```
 
-2. Compila tu proyecto junto con la librería:
+2. Compile your project together with the library:
 
 ```bash
 cc main.c libft.a
 ```
 
-O si es necesario:
+Or if necessary:
 
 ```bash
 cc main.c -L. -lft
@@ -147,47 +147,47 @@ cc main.c -L. -lft
 
 ---
 
-## Gestión de memoria
+## Memory Management
 
-Toda la memoria asignada dinámicamente está correctamente gestionada.  
-No se permiten memory leaks.  
-Toda reserva en el heap debe liberarse cuando ya no sea necesaria.
-
----
-
-## Recursos
-
-Recursos utilizados durante el desarrollo:
-
-- Manuales del sistema (`man nombre_función`).
-- Documentación de la biblioteca estándar de C.
-- Documentación oficial de 42 (intranet).
-
-### Uso de IA
-
-Las herramientas de IA se utilizaron únicamente como apoyo para:
-
-- Aclarar conceptos teóricos.
-- Comprender casos límite (edge cases).
-- Revisar explicaciones lógicas.
-
-Todo el código fue escrito, probado y comprendido manualmente para garantizar el aprendizaje real del proyecto.
+All dynamically allocated memory is properly managed.  
+No memory leaks are allowed.  
+All heap allocations must be freed when they are no longer needed.
 
 ---
 
-## Aprendizajes adquiridos
+## Resources
 
-Durante este proyecto he desarrollado:
+Resources used during development:
 
-- Mayor comprensión de punteros
-- Dominio de la asignación y liberación de memoria
-- Entendimiento interno del funcionamiento de funciones estándar
-- Implementación básica de estructuras de datos
-- Mejora en la detección y resolución de errores como segmentation faults
+- System manuals (`man function_name`)  
+- C standard library documentation  
+- Official 42 documentation (intranet)  
+
+### AI Usage
+
+AI tools were used strictly as learning support to:
+
+- Clarify theoretical concepts  
+- Understand edge cases  
+- Review logical explanations  
+
+All code was written, tested, and fully understood manually to ensure genuine learning.
 
 ---
 
-## Nota final
+## Skills Developed
 
-Libft es la base de futuros proyectos en 42.
-Esta librería será ampliada y reutilizada a lo largo del cursus.
+During this project, I developed:
+
+- A deeper understanding of pointers  
+- Mastery of memory allocation and deallocation  
+- Internal understanding of how standard functions work  
+- Basic implementation of data structures  
+- Improved debugging and segmentation fault analysis skills  
+
+---
+
+## Final Note
+
+Libft is the foundation of future projects at 42.  
+This library will be expanded and reused throughout the cursus.
