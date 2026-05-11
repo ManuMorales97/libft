@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 15:35:19 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/24 14:26:18 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 12:57:51 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (dest);
 	if (d > s && d < s + n)
 	{
-		while (--n > 0)
+		while (n-- > 0)
 			d[n] = s[n];
 	}
 	else

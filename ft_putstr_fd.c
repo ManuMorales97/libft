@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 18:19:29 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/11 17:14:11 by manmoral         ###   ########.fr       */
+/*   Created: 2026/05/11 16:26:34 by manmoral          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:53 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
-}
-/*int main(void)
-{
-	t_list	*list;
-	t_list	*list02;
-	t_list	*last;
+	int	i;
 
-	list = ft_lstnew("Caraculo");
-	list02 = ft_lstnew("Hola ");
-	ft_lstadd_front(&list, list02);
-	last = ft_lstlast(list);
-	printf("%s\n", (char *)last->content);
-	return (0);
-}*/
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}

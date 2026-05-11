@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:43:54 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/01 10:10:43 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 16:04:49 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static char	*int_into_string(long nb, int len)
 	if (!result)
 		return (NULL);
 	result[len] = '\0';
+	len--;
 	if (nb < 0)
 	{
 		result[0] = '-';
@@ -29,7 +30,7 @@ static char	*int_into_string(long nb, int len)
 		result[0] = '0';
 	while (nb > 0)
 	{
-		result[--len] = (nb % 10) + '0';
+		result[len--] = (nb % 10) + '0';
 		nb = nb / 10;
 	}
 	return (result);
@@ -41,14 +42,13 @@ char	*ft_itoa(int n)
 	char	*result;
 	long	nb;
 
+	nb = (long)n;
 	len = 1;
-	if (n < 0)
+	if (nb < 0)
 	{
-		nb = -n;
+		nb = -nb;
 		len++;
 	}
-	else
-		nb = n;
 	while (nb >= 10)
 	{
 		nb = nb / 10;

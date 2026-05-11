@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 11:17:01 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/06 15:23:26 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:21:39 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	if (lst == NULL)
+	if (*lst == NULL)
+	{
 		*lst = new;
+		return ;
+	}
 	last = ft_lstlast(*lst);
 	last->next = new;
-	new->next = NULL;
 }
 
 /*int main(void)

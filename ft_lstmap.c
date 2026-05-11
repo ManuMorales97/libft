@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 13:31:24 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/06 15:24:29 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:31:25 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlist;
 	t_list	*newnode;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
 	node = lst;
 	newlist = NULL;
 	while (node)
 	{
-		newnode = ft_lstnew(f(newnode->content));
+		newnode = ft_lstnew(f(node->content));
 		if (!newnode)
 		{
-			ft_lstclear(&newnode, del);
+			ft_lstclear(&newlist, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&newlist, newnode);

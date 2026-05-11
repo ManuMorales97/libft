@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:40:35 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/28 16:48:54 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 15:49:23 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@ char	*ft_strdup(const char *s)
 {
 	char	*str;
 	size_t	i;
+	size_t	len;
 
-	i = 0;
-	str = malloc(ft_strlen((char *)s) + 1);
+	len = ft_strlen((char *)s);
+	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
-	while (str[i] != '\0')
+	i = 0;
+	while (i <= len)
 	{
 		str[i] = s[i];
 		i++;
 	}
-	str[i] = '\0';
-	return ((char *)s);
+	return (str);
 }
 
 /*int	main(void)

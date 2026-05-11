@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 15:57:35 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/24 14:10:22 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 15:35:09 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+	size_t	total;
 
-	if (nmemb != 0 && (size * nmemb) > SIZE_MAX)
+	if (nmemb != 0 && size != '\0' && nmemb > SIZE_MAX / size)
 		return (NULL);
-	ptr = malloc(nmemb * size);
+	total = nmemb * size;
+	ptr = malloc(total);
 	if (!ptr)
 		return (NULL);
-	ft_memset(ptr, 0, nmemb * size);
+	ft_memset(ptr, 0, total);
 	return (ptr);
 }
 

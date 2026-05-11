@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 15:25:24 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/29 12:20:54 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 13:11:53 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen((char *) s);
 	while (i >= 0)
 	{
-		if ((unsigned char)s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 		i--;
 	}

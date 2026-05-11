@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 16:12:31 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/06 15:22:20 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:13:55 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*node;
 	t_list	*temp;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || !del)
 		return ;
 	node = *lst;
-	while (node->next != NULL)
+	while (node)
 	{
 		temp = node->next;
 		del(node->content);

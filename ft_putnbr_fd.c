@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 10:26:12 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/06 15:26:41 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:12:11 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	str;
+	long	nb;
 
-	if (n < 0)
+	nb = (long) n;
+	if (nb < 0)
 	{
 		write(fd, "-", 1);
-		n = -n;
+		nb = -nb;
 	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	str = (n % 10) + '0';
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	str = (nb % 10) + '0';
 	write(fd, &str, 1);
 }
 /*int	main(void)

@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 12:43:45 by manmoral          #+#    #+#             */
-/*   Updated: 2026/05/06 15:32:35 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 16:22:58 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		result[i] = f(i, s[i]);
 		i++;
 	}
+	result[i] = '\0';
 	return (result);
 }
 

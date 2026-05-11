@@ -6,7 +6,7 @@
 /*   By: manmoral <manmoral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 10:36:44 by manmoral          #+#    #+#             */
-/*   Updated: 2026/04/24 14:26:41 by manmoral         ###   ########.fr       */
+/*   Updated: 2026/05/11 15:04:29 by manmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		srclen++;
 	if (dstlen == size)
 		return (size + srclen);
-	while (src[i] != '\0' && dstlen + 1 < size - 1)
+	while (src[i] != '\0' && dstlen + i + 1 < size)
 	{
 		dst[dstlen + i] = src[i];
 		i++;
